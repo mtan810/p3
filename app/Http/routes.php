@@ -19,6 +19,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
     Route::post('/lorem-ipsum', 'LoremIpsumController@postIndex');
+    Route::get('/random-user', 'RandomUserController@getIndex');
+    Route::post('/random-user', 'RandomUserController@postIndex');
 
     if (App::environment('local')) {
         Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
