@@ -19,7 +19,7 @@
                type='text'
                id='number_of_paragraphs'
                name='number_of_paragraphs'
-               value='{{ old('number_of_paragraphs') }}'
+               value='<?php if(isset($_POST['number_of_paragraphs'])) echo $_POST['number_of_paragraphs']; else echo old('number_of_paragraphs') ?>'
                maxlength='2'
            >
            {{ $errors->first('number_of_paragraphs') }}

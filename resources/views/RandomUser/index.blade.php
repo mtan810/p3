@@ -19,7 +19,7 @@
                type='text'
                id='number_of_users'
                name='number_of_users'
-               value='{{ old('number_of_users') }}'
+               value='<?php if(isset($_POST['number_of_users'])) echo $_POST['number_of_users']; else echo old('number_of_users') ?>'
                maxlength='2'
            >
            {{ $errors->first('number_of_users') }}
@@ -30,6 +30,7 @@
                type='checkbox'
                id='birthdate'
                name='birthdate'
+               <?php if(isset($_POST['birthdate'])) echo 'checked'; ?>
            >
            <label for='birthdate'>Check if you want to add a birthdate</label>
 
@@ -38,6 +39,7 @@
                type='checkbox'
                id='profile'
                name='profile'
+               <?php if(isset($_POST['profile'])) echo 'checked'; ?>
            >
            <label for='profile'>Check if you want to add a profile</label>
          </div>
