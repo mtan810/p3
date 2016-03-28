@@ -14,14 +14,14 @@
 
         <div class='form-group'>
            <label for='number_of_paragraphs'>How many paragraphs do you want?</label><br>
-           <label for='number_of_paragraphs'>Number of paragraphs</label>
+           <label for='number_of_paragraphs'>Number of paragraphs (Max: 99)</label>
            <input
                type='text'
                id='number_of_paragraphs'
                name='number_of_paragraphs'
                value='{{ old('number_of_paragraphs') }}'
                maxlength='2'
-           >(Max: 99)
+           >
            {{ $errors->first('number_of_paragraphs') }}
         </div>
 
