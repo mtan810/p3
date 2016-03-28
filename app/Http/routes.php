@@ -16,18 +16,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
         return view('welcome');
     });
-    
-    Route::get('/practice', function() {
 
-        $data = Array('foo' => 'bar');
-        Debugbar::info($data);
-        Debugbar::error('Error!');
-        Debugbar::warning('Watch out…');
-        Debugbar::addMessage('Another message', 'mylabel');
+    Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
+    Route::post('/lorem-ipsum', 'LoremIpsumController@postIndex');
 
-        return 'Practice';
-    });
-    
     if (App::environment('local')) {
         Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     }
