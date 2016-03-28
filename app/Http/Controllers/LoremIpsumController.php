@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Badcow\LoremIpsum\Generator;
+use LoremIpsum;
 
 class LoremIpsumController extends Controller {
 
@@ -28,7 +28,7 @@ class LoremIpsumController extends Controller {
 
         $number_of_paragraphs = $request->input('number_of_paragraphs');
 
-        $generator = new Generator();
+        $generator = new LoremIpsum();
         $paragraphs = implode('<p>', $generator->getParagraphs($number_of_paragraphs));
 
         return view('LoremIpsum.index',[
