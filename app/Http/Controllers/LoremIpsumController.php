@@ -23,7 +23,7 @@ class LoremIpsumController extends Controller {
     public function postIndex(Request $request) {
         
         $this->validate($request,[
-            'number_of_paragraphs' => 'required|integer|max:99'
+            'number_of_paragraphs' => 'required|integer|min:1|max:99'
         ]);
 
         $number_of_paragraphs = $request->input('number_of_paragraphs');
