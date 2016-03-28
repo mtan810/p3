@@ -1,45 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title')
+    Developer's Best Friend
+@stop
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('content')
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    <h2>Lorem Ipsum Generator</h2>
+    <blockquote>
+        In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation.
+        Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content.
+        For more information, check the Wikipedia article <a href='https://en.wikipedia.org/wiki/Lorem_ipsum'>here</a>.
+    </blockquote>
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+    <p>Create random filler text for your applications.</p>
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+    <a href='/lorem-ipsum'>Click here to generate text here!</a>
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+    <br>
+
+    <h2>Random User Generator</h2>
+
+    <p>Create random user data for your applications. Like Lorem Ipsum, but for people.</p>
+
+    <a href='/random-user'>Click here to generate users here!</a>
+
+@stop
