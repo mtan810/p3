@@ -51,17 +51,13 @@
         <br>
 
         <?php echo $users ?>
-        
+
         {{-- <ul class='errors'>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul> --}}
-        
-        @if(count($errors) > 0)
-            Please correct the errors above and try again.
-        @endif
-        
+
     </form>
 
 @stop
