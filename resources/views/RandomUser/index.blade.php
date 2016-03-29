@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-    
+
+    <br><a href='/'>&larr; Home</a>
+
     <h1>Random User Generator</h1>
 
     <form method='POST' action='/random-user'>

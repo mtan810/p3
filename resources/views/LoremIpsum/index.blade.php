@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-    
+
+    <br><a href='/'>&larr; Home</a>
+
     <h1>Lorem Ipsum Generator</h1>
 
     <form method='POST' action='/lorem-ipsum'>
