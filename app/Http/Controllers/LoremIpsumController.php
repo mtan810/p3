@@ -29,7 +29,7 @@ class LoremIpsumController extends Controller {
         $number_of_paragraphs = $request->input('number_of_paragraphs');
 
         $generator = new LoremIpsum();
-        $paragraphs = '<p>'.implode('<p>', $generator->getParagraphs($number_of_paragraphs));
+        $paragraphs = '<br><p>'.implode('<p>', $generator->getParagraphs($number_of_paragraphs));
 
         return view('LoremIpsum.index',[
         	'paragraphs' => $paragraphs,

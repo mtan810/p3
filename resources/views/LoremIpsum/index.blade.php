@@ -29,7 +29,7 @@
 
         <button type="submit" class="btn btn-primary">Generate text!</button>
 
-        <br><br>
+        <br>
 
         <?php echo $paragraphs ?>
         
